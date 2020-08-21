@@ -1,0 +1,52 @@
+parameters:
+    hash: '$argon2id$v=19$m=65536,t=4,p=1$kTVp08r7IMsY5RRZR1Acgw$AseKyBczXOzanCA0H18YJO4M5pm1RxmLtTfRcQMmAD0'
+
+App\Entity\Address:
+  address_{1..30}:  # Quantity of iteration of entity
+    street: '<streetAddress()>' # Key word used here are methods used by Faker
+    postalCode: '<numberBetween(44000, 85000)>'
+    city: '<city()>'
+    longitude: '<longitude(40, 50)>'
+    latitude: '<latitude(-2, -1)>'
+    createdAt: '<date_create()>'
+
+App\Entity\Library:
+  library_{1}:
+    name: '<text(10)>'
+    address: '@address_*'
+    createdAt: '<date_create()>'
+
+App\entity\User:
+  user_{1..19}:
+    firstname:  '<firstName()>'
+    lastname: '<lastName()>'
+    email: '<email()>'
+    password: '<{hash}>'
+    phoneNumber: '<numberBetween(3, 10)>'
+    roles: 'ROLE_USER'
+    library : '@library_*'
+    address (unique) : '@address_*'
+    createdAt: '<date_create()>'
+
+App\Entity\Book:
+  book_{1..20}:
+    title: '<text(20)>'
+    type: '<word(10)>'
+    description: '<text(100)>'
+    isbn: '<isbn13()>'
+    author: '<firstName()>'
+    publicationDate: '<dateTime("d-m-Y")>'
+    createdAt: '<date_create()>'
+
+
+#App\entity\Booking:
+#  booking_{1..20}:
+#    dateStart: '<date_create()>'
+#    dateEnd: '<date_create()>'
+#    book: '@book_*'
+#    userOwner: '@user_*'
+#    libraryOwner: '@library_*'
+#    userBorrower: '@user_*'
+#    createdAt: '<date_create()>'
+
+

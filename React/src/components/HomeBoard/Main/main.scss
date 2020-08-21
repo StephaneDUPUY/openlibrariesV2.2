@@ -1,0 +1,76 @@
+.last-users {
+  max-width: 100%;
+
+  &-title {
+    padding: 1em;
+    border-bottom: 1px solid grey;
+  }
+
+  &-list {
+    white-space: nowrap;
+	  overflow: hidden;
+  }
+}
+
+.figure-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.figure-icon {
+  color: grey;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.last-books {
+  max-width: 100%;
+
+  &-title {
+    padding: 1em;
+    border-bottom: 1px solid grey;
+  }
+
+  &-card {
+    margin: 1em 39px;
+    width: 11rem;
+    align-items: center;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+  }
+
+  &-add {
+    margin: 1em 39px;
+    width: 11rem;
+    align-items: center;
+    background-color: grey;
+  }
+}
+
+.add-book {
+
+  & > * {
+    color: white;
+  }
+}
+
+.no-padding {
+  padding-right: 0;
+  overflow-y: hidden;
+  height: 52vh;
+}
+
+.address-api {
+  cursor: pointer;
+}
+
+.title_success-add-user {
+  color : #2D132C;
+}

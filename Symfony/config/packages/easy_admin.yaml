@@ -1,0 +1,62 @@
+easy_admin:
+
+    design:
+        # menu order
+        menu:
+            - label: 'Comptes'
+              icon: 'user'
+              children:
+                  - {entity: 'User'}
+                  - {entity: 'Library'}
+            - {entity: 'Book', label: 'Livres', icon: 'book'}
+
+    # set name for Admin dashboard
+    site_name: 'Openlibraries'
+    # set view of user connected
+    user:
+        display_name: true
+        display_avatar: true
+        name_property_path: 'fullName'
+
+    # entities to be displayed
+    entities:
+        # List the entity class name you want to manage
+        User:
+            class: App\Entity\User
+            #French label
+            label: 'Utilisateurs'
+            list:
+                #fields to be displayed
+                fields:
+                    - {property: 'firstname', label: 'Prénom'}
+                    - {property: 'lastname', label: 'Nom'}
+                    - {property: 'email', label: 'Contact'}
+                    - {property: 'library', label: 'Bibliothèque'}
+            search:
+                fields: ['email']
+
+        Library:
+            class: App\Entity\Library
+            label: 'Bibliothèque'
+            list:
+              fields:
+                  - {property: 'name', label: 'Nom'}
+                  - {property: 'address', label: 'Adresse'}
+
+        Book:
+            class: App\Entity\Book
+            label: 'Livres'
+            list:
+                fields:
+                    - {property: 'title', label: 'Titre'}
+                    - {property: 'type', label: 'Genre'}
+                    - {property: 'isbn', label: 'ISBN'}
+            search:
+                fields: ['isbn']
+
+
+        #- App\Entity\Book
+        #- App\Entity\Booking
+        #- App\Entity\Library
+        #- App\Entity\User
+

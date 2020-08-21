@@ -1,0 +1,34 @@
+.modalResponseIsbn {
+
+
+  &-img {
+    height: 100px;
+    width: 50px;
+  }
+
+  &-title {
+    font-size: 1.5em;
+    color: 707070;
+    margin-bottom: 0em;
+  }
+
+  &-author {
+    font-size: 1.2em;
+    color: #707070;
+    margin-top: 0em;
+  }
+
+  &-contain-text {
+    padding:0;
+  }
+  &-text {
+    font-size: 1.2em;
+    padding: 0em;
+
+  }
+  &-buttons {
+    display: block;
+    display: flex;
+    flex-direction: row;
+  }
+}

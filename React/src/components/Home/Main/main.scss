@@ -1,0 +1,48 @@
+.main-container {
+  max-width: 100%;
+}
+
+h2.about {
+  text-align: center;
+  margin-top: 4em;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.about-text {
+  text-align: center;
+  margin: 4em 0;
+}
+
+.image-step {
+  width: 171px;
+  height: 180px;
+  margin-top: 5em;
+  margin-bottom: 1em;
+}
+
+.button-learn-more {
+  text-align: center;
+  margin: 5em 0;
+  color: white;
+}
+
+.button-learn-more {
+  background-color: #ee4540;
+  border-color: #ee4546;
+}
+
+.button-learn-more:hover {
+  background-color: #c72c41;
+  border-color: #c72c41;
+}
+
+.button-learn-more:focus {
+  background-color: #ee4540;
+  border-color: #ee4546;
+  box-shadow: none;
+}
+
+.text-icon-strong {
+  font-weight: bold;
+}

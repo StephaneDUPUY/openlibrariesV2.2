@@ -1,0 +1,6 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+# set route to autenticate users with LexikJWT
+api_login_check:
+    path: /api/login_check

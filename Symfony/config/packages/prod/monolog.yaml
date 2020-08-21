@@ -1,0 +1,52 @@
+monolog:
+    handlers:
+        main:
+            # on change
+            type: fingers_crossed
+            # 400 and 500 level errors logged
+            action_level: info
+            # used on group
+            handler: grouped
+        # group used
+        grouped:
+            type: group
+            # local store and email logs
+            members: [streamed, deduplicated]
+        # streamed used for local store
+        streamed:
+            type:  stream
+            path:  '%kernel.logs_dir%/%kernel.environment%.log'
+            level: info
+        # deduplication used for mail
+        deduplicated:
+            # avoid duplicate log for same error
+            type: deduplication
+            # time in seconds during which duplicate entries are discarded
+            time: 10
+            handler: swift
+        #SwiftMailer from/to
+        swift:
+            type:       swift_mailer
+            from_email: 'sdupuy.contact@gmail.com'
+            to_email:   'sdupuy.contact@gmail.com'
+            subject:    'An Error Occurred! %%message%%'
+            level:      info
+            formatter:  monolog.formatter.html
+            content_type: text/html
+        # NOT USED HERE
+        #nested:
+        #    type: stream
+        #    path: "%kernel.logs_dir%/%kernel.environment%.log"
+        #    level: debug
+        #console:
+        #    type: console
+        #    process_psr_3_messages: false
+        #    channels: ["!event", "!doctrine"]
+        #deprecation:
+        #    type: stream
+        #    path: "%kernel.logs_dir%/%kernel.environment%.deprecations.log"
+        #deprecation_filter:
+        #    type: filter
+        #    handler: deprecation
+        #    max_level: info
+        #    channels: ["php"]

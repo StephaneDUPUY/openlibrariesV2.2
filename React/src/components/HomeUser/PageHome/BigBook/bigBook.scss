@@ -1,0 +1,117 @@
+.cardBigBook {
+  background-color: white;
+    width: 800px;
+    height: 13em;
+    position: relative;
+    margin-top: 2em;
+    box-shadow: 30px 3px 30px 0px rgba(171,171,171,0.4);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+
+    &-leftPart {
+      width: 0;
+      height: 0;
+      border-top: 150px solid #F1F5F9;
+      border-right: 150px solid transparent;
+    }
+
+    &-rightPart {
+      padding-left: 2.8em;
+      padding-top: 0.5em;
+      overflow: hidden;
+      white-space: nowrap;
+
+        &-title {
+          font-size: 1.2em;
+          margin-bottom: 0.2em;
+          color: #707070;
+        }
+
+        &-author {
+          font-size: 1em;
+          margin-top: 0;
+          color: #9f9898;
+        }
+
+        &-descriptif {
+          font-size: 0.8em;
+          color: #9f9898;
+          font-weight: 700;
+          white-space: normal;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 7;
+          -webkit-box-orient: vertical;
+        }
+    }
+
+    &-image {
+      position: absolute;
+      top: -1.3em;
+      left: 1.3em;
+      box-shadow: 10px 5px 25px #ABABAB;
+      width: 9em;
+      height: 13em;
+      cursor: pointer;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// .cardBookSmall {
+//   background-color: #F4F2F3;
+//   width: 250px;
+//   height: 180px;
+//   position: relative;
+//   margin-top: 3em;
+
+//   display: flex;
+//   flex-direction: column;
+
+//     &-image {  
+//       position: absolute;
+//       top: -2em;
+//       left: 0.5em;
+//       box-shadow: 10px 5px 25px #ABABAB;
+//       height: 10em;
+//     }
+
+//   &-rightPart {
+
+//     padding: 0.2em;
+
+//     &-title {
+//       font-size: 1em;
+//       margin-bottom: 0.2em;
+//       color: #707070;
+//     }
+  
+//     &-author {
+//       font-size: 0.8em;
+//       margin-top: 0;
+//       color: #BCBCBC;
+//     }
+  
+   
+//   }
+  
+//   &-leftPart {
+//     width: 0;
+//     height: 0;
+//     border-top: 150px solid white;
+//     border-right: 150px solid transparent;
+//   }
+// }
+
+
+

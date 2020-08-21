@@ -1,0 +1,37 @@
+.footer-container {
+  max-width: 100%;
+  background: #2d132c;
+  height: 10rem;
+}
+
+.link-pages > a {
+  margin: 0 10px;
+}
+
+.social-icon {
+  text-align: end;
+
+  &-twitter {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+  }
+
+  &-instagram {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
+
+  &-youtube {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
+
+  &-github {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
+}
